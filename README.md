@@ -1,5 +1,5 @@
 
-# COMP 170 SU25 WEEK 07
+# COMP 170 SU25 WEEK 08
 
 This assignment has two parts: a coding part based on current material we discuss in class and a reflection part to evaluate work you have already submitted.
 
