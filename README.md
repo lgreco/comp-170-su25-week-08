@@ -48,7 +48,7 @@ day_in_year(2,15)
 ```
 should return 46, because February 15 is the 46th day in the year. 
 
-If $d_b$ is the day of the year for the target birthday and $d_t$ is the day of the year for today, the number of days until the target birthday is $d_b-d_t$ if $d_b>d_t$. Otherwise try $365-(d_b-d_t)$.
+If $d_b$ is the day of the year for the target birthday and $d_t$ is the day of the year for today, the number of days until the target birthday is $d_b-d_t$ if $d_b>d_t$. Otherwise try $365+(d_b-d_t)$.
 
 
 ## Code requirements

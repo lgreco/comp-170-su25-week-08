@@ -62,3 +62,7 @@ class Birthday:
         return f"[ {self.get_month()}/{self.get_day()} ]"
     
 
+demo = Birthday(6,29)
+
+print(demo.day_in_year(6,29)) # d_b
+print(demo.day_in_year(4,29)) # d_t
