@@ -24,19 +24,15 @@ Write your code in files `SuperVehicles.py` and `SuperAles.py` respectively.
 
 ## Reflect
 
-Review the posted [solutions from the previous assignment](./solutions_week06.py). Compare the posted solutions with your solutions. Notice the differences between your code and the solutions code and describe them. Trivial differences like the names of variables are not that important.
+Review the posted solutions from the previous assignment: [ales](./solutions_week07/SuperAles.py) and [vehicles](./solutions_week07/SuperVehicles.py). Compare the posted solutions with your solutions. Notice the differences between your code and the solutions code and describe them. Trivial differences like the names of variables are not that important.
 
 ### Frequent mistakes expected at this point
 
-* **Your methods have multiple return.** This usually happens with AI-generated code or with code found online. There is nothing wrong with using these resoruces *as long as you study the code you find, understand how it works, and adjust it to meet the assignemnt specifications.*
+* You wrote the superclass but forgot to rewrite the derived classes.
 
 * **Code has no comments** to demonstrate mastery of the program.
 
-* **Code does not produce correct outputs** because it was not tested after completed.
-
-* **Code uses excessive logic** which may be the sign of AI-generated programs.
-
-* **Code does not include type hints (annotations).** This is also typical with solutions found online or are AI-generated.
+* Extra points if your code has some tests that you wrote yourelf without being asked to (shows initiative/curiocity).
 
 
 ### Read more about:
