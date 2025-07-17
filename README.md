@@ -22,7 +22,7 @@ def say_birthday(self):
 that returns a conversational string with someone's birthday. For example, if the birthday is on 6/29, the method should return the string "29th of June". Or, if someone's birthday is on 1/1, the conversational string should be "1st of January", etc.
 
 
-### Redefine the `<` operator for two Person objects
+### Redefine the `<` operator for two `Person` objects
 
 Redefine the `<` operator with the *special function*
 ```python
