@@ -1,53 +1,41 @@
-from datetime import date
+from Birthday import Birthday
+
 
 class Person:
 
-    # define state: what are the variables of the object
-    # The best way to show an object's variables (aka attributes or fields)
-    # is to show how an object is instantiated.
     def __init__(self, first_name, last_name):
+        """A person is defined by a first and last name, a birthday in the 
+        form (month, day), and a city they live in. Additional fields may 
+        be added here later. A new object requires only a first and last 
+        name to instatiate. The remaining fields can be set later using 
+        the corresponding mutator methods."""
         self.first_name = first_name
         self.last_name = last_name
-        self._ssn = -1 # private please
-        self._dob = None
+        self.birthday = None
+        self.city = None
 
-    # define behavior: what are the method the object offers?
     def introduce(self):
-        print(f"\nHello, my name is {self.first_name} and I am {self.get_age()} years old.")
+        """Simple way for a person object to introduce itself."""
+        print(
+            f"Hello, my name is {self.first_name} and my birthday is on {self.say_birthday()}"
+        )
 
-    def set_ssn(self, ssn: int) -> None:
-        # simple rule: SSNs cannot have all-0s in any of their parts. For example,
-        # 000-GG-SSSS, AAA-00-SSSS, and AAA-GG-0000 are illegal values. The method
-        # should not allow such values. If SSN security number is to be represented
-        # as an integer, then 000-GG-SSSS becomes GGS,SSS whose greatest value is
-        # 999,999. So any SSN has to have an int value > 999,999, etc. We wont 
-        # worry about the other restrictions for now because, really, SSN, should be
-        # an object itself, not an int variable.
-        if ssn < 1_000_000:
-            raise ValueError("SSN cannot start with 000")
-        else:
-            self._ssn = ssn
-    
-    
-    def set_dob(self, year, month, day):
-        self._dob = date(year, month, day)
-    
-    def get_age(self):
-        age = -1
-        if self._dob:
-            today = date.today()
-            age = today.year-self._dob.year
-            if (today.month, today.day) < (self._dob.month, self._dob.day):
-                age -= 1
-        return age
-    
-    def get_name(self):
+    def set_birthday(self, month, day):
+        """Mutator for birthday. Uses our very own Birthday class."""
+        self._birthday = Birthday(month, day)
+
+    def set_city(self, city):
+        """Mutator for city."""
+        self.city = city
+
+    def get_first_name(self):
+        """Accessor for first name"""
         return self.first_name
-    
+
+    def get_last_name(self):
+        """Accessor for last name"""
+        return self.last_name
+
     def __str__(self):
+        """String representation for the object"""
         return f"[ {self.first_name} {self.last_name}]"
-    
-    def __lt__(self, other):
-        return self.get_age() < other.get_age()
-    #def __gt__(self, other):
-    #    return self.get_age() > other.get_age()
